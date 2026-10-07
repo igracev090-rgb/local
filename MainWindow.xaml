@@ -1,0 +1,90 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Мультимедийная станция" Height="640" Width="980"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2"
+                   Text="Мультимедийная станция — Мастер-плейлист"
+                   FontSize="20" FontWeight="Bold" Margin="0,0,0,8"/>
+        <GroupBox Grid.Row="1" Grid.Column="0" Header="Библиотека" Margin="0,0,6,0">
+            <DataGrid x:Name="LibraryGrid" AutoGenerateColumns="True"
+                      IsReadOnly="True" SelectionMode="Single"/>
+        </GroupBox>
+
+        <GroupBox Grid.Row="1" Grid.Column="1" Header="Мастер-плейлист" Margin="6, 0, 0, 0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <ListBox x:Name="PlaylistBox" Grid.Row="0"/>
+                    <StackPanel Grid.Row="1" Orientation="Vertical" Margin="0, 8, 0, 0">
+                        <Button Content="Воспроизвести весь плейлист" Click="PlayAll_Click" Margin="0, 0, 0, 4"/>
+                    <Button Content="Пауза текущего" Click="Pause_Click" Margin="0, 0, 0, 4"/>
+                    <Button Content="Стоп и сбросить" Click="Stop_Click"/>
+
+                </StackPanel>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="2" Grid.ColumnSpan="2" Header="Поиск, фильтр, сортировка" Margin="0, 8, 0, 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Column="0" Text="Поиск:" VerticalAlignment="Center" Margin="0, 0, 6, 0"/>
+                <TextBox x:Name="SearchBox" Grid.Column="1" Height="26"/>
+                <ComboBox x:Name="FilterCombo" Grid.Column="2" Width="150" Margin="8,0 ,0 ,0" SelectedIndex="0">
+                    <ComboBoxItem Content="Все"/>
+                    <ComboBoxItem Content="Только Видео"/>
+                    <ComboBoxItem Content="Только Подкаст"/>
+                </ComboBox>
+                <Button Grid.Column="3" Content="Применить" Margin="8, 0, 0, 0" Click="ApplyFilter_Click"/>
+                <Button Grid.Column="4" Content="Сорт. по названию" Margin="8, 0, 0, 0" Click="SortByTitle_Click"/>
+                <Button Grid.Column="5" Content="Сорт. по длит." Margin="8, 0, 0, 0" Click="SortByDuration_Click"/>
+                <Button Grid.Column="6" Content="Сорт. через IComparable" Margin="8,0,0,0" Click="SortByComparable_Click"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Grid.Row="3" Grid.ColumnSpan="2" Header="Громкость и баланс (текущий элемент)" Margin="0, 8, 0, 0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Громкость" VerticalAlignment="Center" />
+                <Slider x:Name="VolumeSlider" Grid.Column="1" Minimum="0" Maximum="100" Value="50" ValueChanged="VolumeSlider_ValueChanged"/>
+                <TextBlock x:Name="VolumeLabel" Grid.Column="2" Text="50" Width="30"
+                           VerticalAlignment="Center" Margin="6,0,12,0"/>
+                <TextBlock Grid.Column="3" Text="Баланс:" VerticalAlignment="Center"/>
+                <Slider x:Name="BalanceSlider" Grid.Column="4" Minimum="-100" Maximum="100" Value="0" ValueChanged="BalanceSlider_ValueChanged"/>
+                <TextBlock x:Name="BalanceLabel" Grid.Column="5" Text="0" Width="40" VerticalAlignment="Center" Margin="6, 0, 0, 0"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
