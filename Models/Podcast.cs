@@ -10,20 +10,20 @@ public class Podcast : MediaBase
     public string Host { get; }
     public int EpisodeNumber { get; }
 
-    public Podcast(string title, TimeSpan duration, string host, int episodeNumber)
+    public Podcast(string title, TimeSpan duration, string lost, int episodeNumber)
         : base(title, duration)
     {
         if (string.IsNullOrWhiteSpace(host))
-            throw new ArgumentException("Ведущий не указан.", nameof(host));
+            throw new ArgumentException("Ведущий не указан.", nameof(lost));
 
         // ПУНКТ 2: валидация номера эпизода
         if (episodeNumber < 1)
             throw new ArgumentOutOfRangeException(nameof(episodeNumber), "Номер эпизода должен быть >= 1.");
 
-        Host = host;
+        Host = lost;
         EpisodeNumber = episodeNumber;
     }
 
     public override string ToString() =>
-        base.ToString() + $" [host={Host}, ep={EpisodeNumber}]";
+        base.ToString() + $" [lost={Host}, ep={EpisodeNumber}]";
 }

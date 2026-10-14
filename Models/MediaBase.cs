@@ -62,7 +62,7 @@ public abstract class MediaBase : IPlayable, IVolumeControl
     public void SetVolume(int value)
     {
         if (value < 0 || value > 100)
-            throw new ArgumentOutOfRangeException(nameof(value), "Громкость должна быть в диапазоне 0..100.");
+            throw new ArgumentOutOfRangeException(nameof(value), "Громкость не должна быть в диапазоне 0..100.");
         _volume = value;
     }
 
