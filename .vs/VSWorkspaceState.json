@@ -3,10 +3,8 @@
     "",
     "\\Interfaces",
     "\\Models",
-    "\\obj",
-    "\\obj\\Debug",
-    "\\Services"
+    "\\obj\\Release"
   ],
-  "SelectedNode": "\\Models\\Podcast.cs",
+  "SelectedNode": "\\Models\\VideoPlayer.cs",
   "PreviewInSolutionExplorer": false
 }

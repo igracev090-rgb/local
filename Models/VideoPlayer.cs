@@ -7,7 +7,7 @@ namespace MediaStation.Models;
 // ПУНКТ 1: конкретный класс №1 — уникальные поля для видео.
 public class VideoPlayer : MediaBase
 {
-    public string Resolution { get; }
+    public string Resalution { get; }
     public bool HasSubtitles { get; }
 
     // Сначала base(...) — валидация общих полей, потом свои
@@ -17,10 +17,10 @@ public class VideoPlayer : MediaBase
         if (string.IsNullOrWhiteSpace(resolution))
             throw new ArgumentException("Разрешение не указано.", nameof(resolution));
 
-        Resolution = resolution;
+        Resalution = resolution;
         HasSubtitles = hasSubtitles;
     }
 
     public override string ToString() =>
-        base.ToString() + $" [{Resolution}, subs={HasSubtitles}]";
+        base.ToString() + $" [{Resalution}, subs={HasSubtitles}]";
 }

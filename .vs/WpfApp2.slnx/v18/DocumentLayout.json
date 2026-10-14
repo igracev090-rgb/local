@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Nitro\\Desktop\\WpfApp2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nitro\\Desktop\\WpfApp2\\Models\\VideoPlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\VideoPlayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nitro\\Desktop\\WpfApp2\\Models\\Podcast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Podcast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "VideoPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\Nitro\\Desktop\\WpfApp2\\Models\\VideoPlayer.cs",
+              "RelativeDocumentMoniker": "Models\\VideoPlayer.cs",
+              "ToolTip": "C:\\Users\\Nitro\\Desktop\\WpfApp2\\Models\\VideoPlayer.cs",
+              "RelativeToolTip": "Models\\VideoPlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-14T07:01:54.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Podcast.cs",
               "DocumentMoniker": "C:\\Users\\Nitro\\Desktop\\WpfApp2\\Models\\Podcast.cs",
               "RelativeDocumentMoniker": "Models\\Podcast.cs",
@@ -39,7 +56,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MediaBase.cs",
               "DocumentMoniker": "C:\\Users\\Nitro\\Desktop\\WpfApp2\\Models\\MediaBase.cs",
               "RelativeDocumentMoniker": "Models\\MediaBase.cs",
@@ -47,12 +64,11 @@
               "RelativeToolTip": "Models\\MediaBase.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAAEAAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T06:49:50.96Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T06:49:50.96Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IPlayable.cs",
               "DocumentMoniker": "C:\\Users\\Nitro\\Desktop\\WpfApp2\\Interfaces\\IPlayable.cs",
               "RelativeDocumentMoniker": "Interfaces\\IPlayable.cs",
@@ -60,8 +76,7 @@
               "RelativeToolTip": "Interfaces\\IPlayable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-14T06:49:43.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-14T06:49:43.993Z"
             }
           ]
         }
